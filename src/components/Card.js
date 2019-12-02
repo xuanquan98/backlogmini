@@ -23,6 +23,12 @@ const useStyles = makeStyles({
   },
 });
 
+//const [open, setOpen] = React.useState(false);
+
+var x = () => {
+
+  console.log('quan')
+}
 export default function SimpleCard() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
@@ -30,7 +36,7 @@ export default function SimpleCard() {
   return (
     <Card className={classes.card}>
 
-<CardContent>
+<CardContent onClick={x}>
                 demo1
                 </CardContent>
     </Card>

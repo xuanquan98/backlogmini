@@ -11,6 +11,7 @@ const App = () => (
       <Header />
       <DatePicker />
       <Table />
+      <Login />
       <Footer />
     </div>
 )

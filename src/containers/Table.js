@@ -19,6 +19,9 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import ButtonGroup from '@material-ui/core/ButtonGroup'
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+
 const Fade = React.forwardRef(function Fade(props, ref) {
     const { in: open, children, onEnter, onExited, ...other } = props;
     const style = useSpring({
@@ -80,6 +83,9 @@ const useStyles = makeStyles(theme => ({
     button: {
         margin: theme.spacing(1),
     },
+    extendedIcon: {
+        marginRight: theme.spacing(1),
+    },
 }));
 
 var styleUl = {
@@ -129,11 +135,22 @@ export default function AutoGrid() {
           <Paper className={classes.paper}>Cong viec</Paper>
            <Paper className={classes.card}>
                <ul style={styleUl} >
-                                                            <li onClick={handleOpen}><Card /></li>
-                                                            <li><Card /></li>
-                                                            <li><Card /></li>
-                                                          </ul>
-                                                          <ButtonDefault />
+                   <li onClick={handleOpen}><Card /></li>
+                   <li><Card /></li>
+                   <li><Card /></li>
+               </ul>
+               <p></p>
+               <Fab
+                   variant="add"
+                   size="medium"
+                   color="default"
+                   aria-label="add"
+                   className={classes.margin}
+                   onClick={handleOpen}
+               >
+                   <AddIcon className={classes.extendedIcon} />
+                   Add task
+               </Fab>
            </Paper>
 
 
